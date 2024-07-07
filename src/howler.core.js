@@ -529,7 +529,7 @@
           for (var i=0; i<self._howls.length; i++) {
             self._howls[i]._emit('resume');
           }
-        });
+        }).catch(() => {});
 
         if (self._suspendTimer) {
           clearTimeout(self._suspendTimer);
